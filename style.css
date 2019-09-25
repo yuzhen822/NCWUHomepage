@@ -1,0 +1,679 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: snow;
+}
+a{
+    text-decoration: none;
+}
+
+.xiaoguo{
+    width: 100%;
+    height:auto;
+    background-color: antiquewhite;
+    margin: 0px auto;    /*上下为0，左右自适应*/
+}
+
+.heading{
+    margin: 0px;
+    width: 100%;
+    height: 90px;
+    background-color: snow;
+    margin: 0px auto;
+}
+
+.heading1{
+    float: left;/*添加浮动*/
+    font-family: "Adobe Arabic";
+    font-size: 30px;
+    color:lightskyblue;
+}
+
+.heading-tou{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+
+
+/*导航栏*/
+
+.divV{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* li */
+.divV li{
+    display: inline-block;
+    margin: 0px 1em;
+
+}
+
+/* a */
+.a{
+    display: inline-block;
+    font-family: "agency fb";
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    /*padding: 0.15em 0.15em  0;*/
+    position: relative;
+    z-index: 999;
+    opacity: 1;
+}
+
+/* 滑过a */
+.a:hover{
+    color: darkslateblue;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.span-content{
+    position: absolute;
+    background-color: lightpink;
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    z-index: 9999;
+    text-align: center;
+    left: 50%;
+    margin-left: -75px;
+    top: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* i */
+.a .span-content i{
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 20px;
+    color: black;
+}
+
+
+
+.span-content::after{
+    display: block;
+    content: "";
+    width: 30px;
+    height: 20px;
+    background-color: floralwhite;
+    background-size: 100% ;
+    position: absolute;
+    bottom:100%;
+    left:50%;
+    margin-left:-15px;
+}
+/*动画效果*/
+.a-1   .span-content{
+    -webkit-transform:translate3d(0,20px,0);
+    transform:translate3d(0,20px,0);
+}
+.a-1 .span-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+
+.a-2 .span-content{
+    -webkit-transform:scale3d(0,1,1);
+    transform:scale3d(0,1,1);
+}
+.a-2   .span-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+
+.a-3 .span-content{
+    -webkit-transform:translate3d(0,-20px,0);
+    transform:translate3d(0,-20px,0);
+}
+.a-3 .span-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+
+.a-4 .span-content{
+    -webkit-transform:translate3d(0,-20px,0);
+    transform:translate3d(0,-20px,0);
+}
+.a-4 .span-content i{
+    -webkit-transform: scale3d(0,1,1);
+    transform: scale3d(0,1,1);
+}
+
+.a-5 .span-content{
+    -webkit-transform:scale3d(0,0,1);
+    transform:scale3d(0,0,1);
+}
+.a-5 .span-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+.a-6 .span-content{
+    -webkit-transform:scale3d(0,1,1);
+    transform:scale3d(0,0,1);
+}
+.a-6  .span-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+.a-7  .span-content{
+    -webkit-transform:translate3d(0,20px,0);
+    transform:translate3d(0,20px,0);
+}
+.a-7 .span-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+.a:hover    .span-content,
+.a:hover    .span-content i{
+    opacity: 0.7;
+    -webkit-transform:translate3d(0,0,0) rotate3d(1,1,1,0deg) scale3d(1,1,1);
+    transform:translate3d(0,0,0) rotate3d(1,1,1,0deg) scale3d(1,1,1);
+}
+
+
+
+
+/*中间内容*/
+.body{
+    width: auto;
+    height: auto;
+    padding: 30px;
+}
+/*设置图片动画*/
+#myimg{
+    width: 200px;
+    height: 60px;
+    /*-webkit-transition: width 2s,height 2s,-webkit-transform 2s;*/
+    transition:width 2s,height 2s, transform 2s ;
+}
+#myimg:hover{
+
+    width: 400px;
+    height: 230px;
+    transform: rotate(360deg);
+    /*-webkit-transform:rotate(360deg) ;*/
+}
+/*分栏*/
+#pp{
+    font-size: 40px;
+    text-align: center;
+    color: cornflowerblue;
+    font-weight: 800;
+}
+#fenlan{
+    width: 600px;
+    text-align: center;
+    margin: auto;
+   column-count: 2;
+    column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-rule: 5px outset firebrick;
+    -webkit-column-rule: 5px outset papayawhip ;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: rgba(69, 26, 79, 0.76);
+
+}
+
+#aaaa{
+    color: #4cae4c;
+    font-size:30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+#fenlan  .tooltip1{
+     color: darkslateblue;
+     font-size: 20px;
+     font-weight: 500;
+     cursor: pointer;/*鼠标放上去变成shou*/
+
+ }
+#huashui,#jinzhuan,#shijian{
+    text-decoration: none;
+}
+.tooltip11{
+    display: block ;
+    color: cornflowerblue;
+    background-color: snow;
+    line-height: 1.6;
+    border: 5px solid gainsboro ;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 5px;
+    overflow: auto;/*若字体超出，则自适应*/
+}
+
+.container .panel .panel-title a{
+    text-decoration: none;
+}
+
+/*表单*/
+#waiceng{
+    width: 100%;
+    height: 500px;
+    margin-left: 1%;
+    /*background-color: black;*/
+
+}
+#left{
+    width: 35%;
+    height: 100%;
+    float: left;
+    /*background-color: #2e6da4;*/
+}
+#kong1{
+    width: 2%;
+    height: 100%;
+    background-color: #FFFFFF;
+    opacity: 0;
+    float: left;
+}
+#right{
+    width: 55%;
+    height: 100%;
+    float: left;
+    /*background-color: #2e6da4;*/
+}
+ table{
+     margin: auto;/*  table居中*/
+    color: coral;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+/*登录入口*/
+#i{
+    font-size: 40px;
+    color: mediumslateblue;
+    font-weight: 800;
+
+}
+/*设置输入框背景色*/
+input{
+    background-color: mediumseagreen;
+    opacity: 0.7;
+}
+
+.container{
+ margin: auto;
+    text-align: center;
+    color: white;
+}
+.container .li i{
+    list-style-type: none;
+}
+.model{
+    font-size: 20px;
+    font-weight: 400;
+    color: #d9edf7;
+}
+h4{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+
+/*视频*/
+.video p{
+   text-align: center;
+    font-size: 40px;
+    color: cornflowerblue;
+    font-weight: 800;
+}
+
+.video #video{
+    width: 800px;
+    height: 500px;
+   position: relative;
+    bottom: 50%;
+    left: 50%;
+    margin:-40px 0 0 -400px ;
+}
+
+h1{
+    text-shadow:10px 10px 20px black;
+}
+
+
+/*瀑布流*/
+
+#pppp{
+font-size: 40px;
+    text-align: center;
+    color: cornflowerblue;
+    font-weight: 800;
+}
+
+
+#tupian{
+    column-width:300px;
+    column-gap:5px;
+}
+#tupian>div{
+    width: 320px;
+    margin: 5px 0px;
+}
+#tupian>div>img{
+    width: 295px;
+}
+#tupian>div>img:hover{
+    width: 310px;
+}
+
+/*广告弹框*/
+#huashui1{
+    width:300px ;
+    height: 300px;
+    background-color: #5bc0de;
+    position: fixed;
+    bottom: 0px;
+    left: 90px;
+    display: none;
+}
+
+#huashui1 img{
+    width: 300px;
+    height: 300px;
+}
+
+
+/*尾部*/
+.footing{
+    padding-top:20px ;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+ /*标签*/
+ .footing #mytab li a{
+    color: #8c8c8c;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+ .footing #mytab li a:hover{
+    color:#2e6da4 ;
+    text-decoration: none;
+}
+ .footing #xiala li a{
+    color: #2e6da4;
+    font-size: 20px;
+    font-weight: 600;
+}
+#xiala{
+    background-color: #e4b9c0;
+    opacity: 0.8;
+}
+#mycontent div {
+   background-color:  #e4b9c0;
+    opacity: 0.8;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e6da4;
+}
+
+
+/*bootstrap图片轮播*/
+#myCarousel{
+    width: 80%;
+}
+
+/*时间轴*/
+.lessionimgbox a{
+    text-decoration: none;
+}
+
+.cf:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.w-1000{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #2e6da4;
+}
+/*承载具体课程图片内容的区域*/
+.lessionlist{
+    /*时间轴内容的承载内容以及课程的内边距*/
+    padding: 60px 0px 60px 0px;
+    width:80%;
+    float: right;
+    border-left: 5px solid #e4e4e4;
+    /*background-color: #cccccc;*/
+}
+.courescontent .lessionlist .learn-lessionlist{
+    margin-bottom: 30px;
+    position: relative;
+}
+/*小方块*/
+.courescontent .lessionlist .learn-lessionlist .stageicon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 30;
+    left: -12px;
+    top: 0;
+    display: block;
+    border: 4px solid #e4e4e4;
+    background: #cccccc;
+}
+/*内容框*/
+.courescontent .lessionlist .learn-lessionlist  .stagewaring-box{
+    width: 160px;
+    height: 150px;
+    padding: 10px;
+    position: absolute;
+    left: -230px;
+    top: 0px;
+    background-color: #d9edf7;
+}
+/*箭头*/
+.courescontent .lessionlist .learn-lessionlist  .stagewaring-box .jiantou-right{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:0;
+    display: block;
+    right: -26px;
+    border-width: 10px 13px;
+    border-style: solid;
+    border-color:  #d9edf7  antiquewhite   antiquewhite #d9edf7;
+
+}
+/*时间轴里面的内容*/
+.courescontent .lessionlist .learn-lessionlist  .stagewaring-box .textcontent{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+.courescontent .lessionlist .textcontent h3{
+    font-size: 18px;
+    color: #1d1d1d;
+    line-height: 30px;
+}
+.courescontent .lessionlist .textcontent p{
+    font-size: 14px;
+    color: #727272;
+    line-height: 20px;
+}
+/*图片部分*/
+.courescontent .lessionlist .lessionimgbox{
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+.lessionimgbox{
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #f7e1b5;
+    position: relative;
+    cursor: pointer;
+}
+.lessionimgbox .img-box{
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.lessionimgbox .img-box img{
+    width: 100%;
+    height: 220px;
+}
+.lessionimgbox h3{
+    height: 40px;
+    padding: 10px 10px;
+    line-height: 18px;
+    overflow: hidden;
+    font-size: 16px;
+}
+.lessionimgbox a h3, .lessionimgbox a:hover, .lessionimgbox a:visited{
+    color: #727272;
+}
+.lessionimgbox .imgboxfoot{
+    height: 30px;
+    background-color: #f7e1b5;
+    line-height: 30px;
+    font-size: 14px;
+    color: darkslategray;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    clear: both;
+    float: right;
+    left: 0;
+    z-index: 50;
+}
+.lessionimgbox .imgboxfoot .minandtime{
+    float: right;
+}
+
+/*浮动*/
+.lessionimgbox .img-pop{
+    width: 100%;
+    height: 300px;
+    padding: 10px 0px;
+    position: absolute;
+    top: 300px;
+    z-index: 60;
+    background-color: #f7e1b5;
+}
+.lessionimgbox .img-pop blockquote p{
+    padding: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    height: 200px;
+    overflow: hidden;
+    color: #727272;
+}
+.lessionimgbox .img-pop .time-user-num{
+    padding: 5px;
+    font-size: 14px;
+    color: #727272;
+}
+.lessionimgbox .img-pop .time-user-num span:nth-child(2){
+    float: right;
+}
+ .btn1:link{
+    width: 150px;
+    height:159px;
+    position: fixed;
+    bottom: 50px;
+   background: url("图片/gotop.png") no-repeat;
+     right: 60px;
+}
+.btn1:hover{
+    width: 150px;
+    height:159px;
+    background: url("图片/gotop.gif") no-repeat;
+}
+
+
+ul{
+    list-style: none;
+}
+/*列表切换*/
+.list,.list-ul{
+    list-style: none;
+}
+.container1{
+    width: 80%;
+    height: 2200px;
+    margin: 0 auto;
+}
+.h33{
+    color: #8a6d3b;
+    text-align: center;
+    padding-top: 1200px;
+}
+.container1 .list-box{
+    /*margin: 0;*/
+    margin-left: 3%;
+    width: 85%;
+    height: 42px;
+    border-bottom: 2px solid #aaaaaa;
+}
+.container1 .list-box .list{
+    float: right;
+    padding-top: 7px;
+}
+.container1 .list-box .list li{
+    cursor: pointer;
+    width: 48px;
+    height: 28px;
+    float: left;
+    display: block;
+    background: url("图片/转换.png");
+}
+.container1 .changelist .list-1-o{
+    width: 25%;
+    height: 240px;
+    float: left;
+    border: 2px solid antiquewhite;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+.container1 .changelist .list-1-v{
+    height: 230px;
+}
+
+.panel-title{
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: inherit;
+    padding-left: 0%;
+}
+/*#aaaa{*/
+    /*height: 30px;*/
+/*}*/
+#b{
+    width: 100%;
+    /*background-color: black;*/
+}
+
